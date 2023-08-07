@@ -79,3 +79,15 @@ aside {
   border-top: 5px solid #255eb4;
   border-bottom: 5px solid #255eb4;
 }
+
+/* Adding a pseudo-class. It will select all li elements that are the first child of its parent elements. So we dont have to add a class to each first element */
+li:first-child {
+  font-weight: bold;
+}
+li:last-child {
+  font-style: italic;
+}
+/* Can use nth-child to select specific child. Can even use specific key words such as odd, it will seleect all odd elements*/
+li:nth-child(2) {
+  /* color: red; */
+}
