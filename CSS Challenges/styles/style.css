@@ -38,9 +38,27 @@ p {
 }
 
 /* Typcially bad pracitce to style elements in accordanace with HTML structure. If we chnage HTML, the styles will change, so use classes */
-footer p {
+/* footer p {
+  font-size: 16px;
+} */
+/* article header p {
+  font-style: italic;
+} */
+
+/* using ID selector - ID's cannot be repeated anyhwere else, only one id per element - dont use ID's, use classes*/
+.author {
+  font-style: italic;
+}
+
+.copyright {
   font-size: 16px;
 }
-article header p {
-  font-style: italic;
+
+.related-author {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.related-list {
+  list-style: none;
 }
