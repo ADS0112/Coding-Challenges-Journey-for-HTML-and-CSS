@@ -1,13 +1,8 @@
-h1,
-h2,
-h3,
-h4,
-li,
-p,
-li {
+body {
   font-family: sans-serif;
   color: #444;
 }
+/* All other style elements inherit the properties of body until those specific elements styled */
 
 h1,
 h2,
@@ -91,3 +86,4 @@ li:last-child {
 li:nth-child(2) {
   /* color: red; */
 }
+/* Inherited properites have the lowest priority */
