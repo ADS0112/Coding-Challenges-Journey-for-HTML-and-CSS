@@ -1,0 +1,40 @@
+body {
+  border: 5px solid black;
+  font-family: sans-serif;
+}
+.main-header {
+  background-color: #d6d2d2f7;
+ 
+}
+.title {
+  text-transform: uppercase;
+  text-align: center;
+}
+ .price {
+  font-size: 30px;
+ }
+
+.free {
+  font-size: 14px;
+  font-weight: bold;
+  color: rgb(129, 129, 129);
+  text-transform: uppercase;
+}
+a:hover {
+  text-decoration: none;
+}
+.list-style {
+  list-style: square;
+}
+
+.cart {
+  font-size: 20px;
+  text-transform: uppercase;
+  border: none;
+  background-color: black;
+  color: white;
+}
+.cart:hover {
+  color: black;
+  background-color: white;
+}
