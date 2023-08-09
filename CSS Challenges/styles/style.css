@@ -1,8 +1,39 @@
+/* Global reset with margin and padding set to 0. Since these can be overwritten very easily we can apply our own padding and margin to each element later. This removes the default padding that comes with the page */
+* {
+  margin: 0;
+  padding: 0;
+}
+
 body {
   font-family: sans-serif;
   color: #444;
+  border-top: 10px solid #255eb4;
 }
 /* All other style elements inherit the properties of body until those specific elements styled */
+nav {
+  font-size: 18px;
+}
+
+article {
+  margin-bottom: 60px;
+}
+.main-header {
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  margin-bottom: 60px;
+  height: 80px;
+}
+.article-header {
+  margin-bottom: 40px;
+}
+
+aside {
+  background-color: #f7f7f7;
+  border-top: 5px solid #255eb4;
+  border-bottom: 5px solid #255eb4;
+  padding: 50px 0;
+  width: 500px;
+}
 
 h1,
 h2,
@@ -18,10 +49,13 @@ h1 {
 
 h2 {
   font-size: 40px;
+  margin-bottom: 30px;
 }
 
 h3 {
   font-size: 30px;
+  margin-bottom: 20px;
+  margin-top: 40px;
 }
 
 h4 {
@@ -30,13 +64,20 @@ h4 {
   text-align: center;
 }
 
+ul,
+ol {
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
 li {
   font-size: 20px;
+  margin-bottom: 10px;
 }
 
 p {
   font-size: 22px;
   line-height: 1.5;
+  margin-bottom: 15px;
 }
 
 /* Typcially bad pracitce to style elements in accordanace with HTML structure. If we chnage HTML, the styles will change, so use classes */
@@ -64,23 +105,33 @@ p {
 .related-list {
   list-style: none;
 }
-
-.main-header {
-  background-color: #f7f7f7;
+a:link {
+  color: #255eb4;
+  text-decoration: none;
+}
+a:visited {
+  color: #255eb4;
 }
 
-aside {
-  background-color: #f7f7f7;
-  border-top: 5px solid #255eb4;
-  border-bottom: 5px solid #255eb4;
+a:hover {
+  color: lightcoral;
+  text-decoration: underline;
 }
-
+a:active {
+  background-color: lightgray;
+}
+/* Using % for width ensures that the size of the image stays the same as you expand or contract the page because it is always the size of the parent container This is useful for building responsive websites*/
+.coding-img {
+  width: 100%;
+  height: auto;
+}
 /* Adding a pseudo-class. It will select all li elements that are the first child of its parent elements. So we dont have to add a class to each first element */
 li:first-child {
   font-weight: bold;
 }
 li:last-child {
   font-style: italic;
+  margin-bottom: 0;
 }
 /* Can use nth-child to select specific child. Can even use specific key words such as odd, it will seleect all odd elements*/
 li:nth-child(2) {
