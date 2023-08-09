@@ -9,6 +9,11 @@ body {
   color: #444;
   border-top: 10px solid #255eb4;
 }
+/* Adds a width to the all the elements with a container, then uses margin left and right auto to center the items. The margin changes as the page shrinks and grows */
+.container {
+  width: 800px;
+  margin: 0 auto;
+}
 /* All other style elements inherit the properties of body until those specific elements styled */
 nav {
   font-size: 18px;
