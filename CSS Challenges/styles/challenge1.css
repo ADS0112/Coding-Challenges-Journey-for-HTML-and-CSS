@@ -24,6 +24,7 @@ body {
 }
 .price {
   font-size: 30px;
+  margin-top: 5px;
 }
 
 .free {
@@ -57,7 +58,7 @@ li {
   border: none;
   background-color: black;
   color: white;
-  width: 825px;
+  width: 100%;
   padding: 15px;
 }
 .cart:hover {
