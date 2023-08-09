@@ -4,6 +4,7 @@
   padding: 0;
 }
 
+/* PAGE SECTIONS */
 body {
   font-family: sans-serif;
   color: #444;
@@ -39,7 +40,7 @@ aside {
   padding: 50px 0;
   width: 500px;
 }
-
+/* SMALLER ELEMENTS */
 h1,
 h2,
 h3 {
@@ -130,6 +131,7 @@ a:active {
   width: 100%;
   height: auto;
 }
+
 /* Adding a pseudo-class. It will select all li elements that are the first child of its parent elements. So we dont have to add a class to each first element */
 li:first-child {
   font-weight: bold;
