@@ -9,15 +9,21 @@ body {
   font-family: sans-serif;
   color: #444;
   border-top: 10px solid #255eb4;
+  /* Position: relaiive here because we want the button to be positoned relatively to this element. not the viewport */
+  position: relative;
 }
 /* Adds a width to the all the elements with a container, then uses margin left and right auto to center the items. The margin changes as the page shrinks and grows */
 .container {
   width: 800px;
   margin: 0 auto;
+  /* Since the button is now in the container, that is the parent element. IT WILL ONLY POSITION ACCORDING THE FIRST RELATIVELY POSITOONED ELEMENT */
+  /* position: relative; */
 }
 /* All other style elements inherit the properties of body until those specific elements styled */
 nav {
   font-size: 18px;
+  /* have to center a elements inside of the parent container, not the elements themselves becuase they are inline-block */
+  text-align: center;
 }
 
 article {
@@ -86,13 +92,35 @@ p {
   margin-bottom: 15px;
 }
 
+h1::first-letter {
+  font-style: normal;
+  margin-right: 5PX;
+}
+
+h3 + p::first-line {
+  /* color: red; */
+ } /* -- + SELECTS THE ADJASCENT SIBLING SELECTOR*/ 
+
+
+ /* BEFORE AND AFTER PSEUDO ELEMNTS */
+ h2 {
+  position: relative;
+ }
+
+h2::after{
+  content:"TOP";
+  background-color: lightcoral;
+  font-size: 10px;
+  font-weight: bold;
+  display: inline-block;
+  padding: 5px 10px;
+  position: absolute;
+  right: -25px
+  top -10px;
+  color: black;
+}
 /* Typcially bad pracitce to style elements in accordanace with HTML structure. If we chnage HTML, the styles will change, so use classes */
-/* footer p {
-  font-size: 16px;
-} */
-/* article header p {
-  font-style: italic;
-} */
+
 
 /* using ID selector - ID's cannot be repeated anyhwere else, only one id per element - dont use ID's, use classes*/
 .author {
@@ -144,4 +172,16 @@ li:last-child {
 li:nth-child(2) {
   /* color: red; */
 }
+
 /* Inherited properites have the lowest priority */
+
+button {
+  font-size: 22px;
+  padding: 20px;
+  cursor: pointer;
+  /* element by default moves in relation to the visible part of the viewpokrt, which not what we want. We want to move it in relation to some other parent element. In this case we want this button to be relative to the page, in other words the body element.  */
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+
+}
