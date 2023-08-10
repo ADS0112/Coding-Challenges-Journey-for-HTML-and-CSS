@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 /* PAGE SECTIONS */
@@ -45,7 +46,7 @@ aside {
   background-color: #f7f7f7;
   border-top: 5px solid #255eb4;
   border-bottom: 5px solid #255eb4;
-  padding: 50px 0;
+  padding: 50px 40px;
 }
 /* SMALLER ELEMENTS */
 h1,
@@ -75,11 +76,12 @@ h4 {
   font-size: 20px;
   text-transform: uppercase;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 ul,
 ol {
-  padding-left: 40px;
+  margin-left: 50px;
   margin-bottom: 20px;
 }
 li {
