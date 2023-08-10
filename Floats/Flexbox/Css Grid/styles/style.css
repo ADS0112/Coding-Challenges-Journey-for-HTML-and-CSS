@@ -25,16 +25,18 @@ nav {
   /* have to center a elements inside of the parent container, not the elements themselves becuase they are inline-block */
   text-align: center;
 }
+.main-header {
+  background-color: #f7f7f7;
+  /* padding: 10px 40px; */
+  margin-bottom: 60px;
+  padding: 20px 40px;
+  /* height: 80px; */
+}
 
 article {
   margin-bottom: 60px;
 }
-.main-header {
-  background-color: #f7f7f7;
-  padding: 10px 40px;
-  margin-bottom: 60px;
-  height: 80px;
-}
+
 .article-header {
   margin-bottom: 40px;
 }
@@ -94,33 +96,30 @@ p {
 
 h1::first-letter {
   font-style: normal;
-  margin-right: 5PX;
+  margin-right: 5px;
 }
 
 h3 + p::first-line {
   /* color: red; */
- } /* -- + SELECTS THE ADJASCENT SIBLING SELECTOR*/ 
+} /* -- + SELECTS THE ADJASCENT SIBLING SELECTOR*/
 
-
- /* BEFORE AND AFTER PSEUDO ELEMNTS */
- h2 {
+/* BEFORE AND AFTER PSEUDO ELEMNTS */
+h2 {
   position: relative;
- }
+}
 
-h2::after{
-  content:"TOP";
+h2::after {
+  content: "TOP";
   background-color: lightcoral;
   font-size: 10px;
   font-weight: bold;
   display: inline-block;
   padding: 5px 10px;
   position: absolute;
-  right: -25px
-  top -10px;
+  right: -25px top -10px;
   color: black;
 }
 /* Typcially bad pracitce to style elements in accordanace with HTML structure. If we chnage HTML, the styles will change, so use classes */
-
 
 /* using ID selector - ID's cannot be repeated anyhwere else, only one id per element - dont use ID's, use classes*/
 .author {
@@ -183,26 +182,34 @@ button {
   position: absolute;
   bottom: 50px;
   right: 50px;
-
 }
 
 /* FLOATS */
 /* Image flots on the left of the cotnainer and breaks from document flow */
 .author-img {
-float: left;
-margin-bottom: 20px;
+  float: left;
+  margin-bottom: 20px;
 }
 /* Without adding float to this, this still displays as a block and starts at the beginning of the container. To break it and have it start where the image floats, you have to float this element as well */
 .author {
   margin-left: 20px;
   margin-top: 20px;
   float: left;
-
 }
 
 h1 {
-  float:left;
+  float: left;
 }
 nav {
   float: right;
+}
+/* .clear {
+  clear: both;
+} */
+
+/* clear fix hack */
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
 }
