@@ -14,7 +14,7 @@ body {
 }
 /* Adds a width to the all the elements with a container, then uses margin left and right auto to center the items. The margin changes as the page shrinks and grows */
 .container {
-  width: 800px;
+  width: 1200px;
   margin: 0 auto;
   /* Since the button is now in the container, that is the parent element. IT WILL ONLY POSITION ACCORDING THE FIRST RELATIVELY POSITOONED ELEMENT */
   /* position: relative; */
@@ -46,7 +46,6 @@ aside {
   border-top: 5px solid #255eb4;
   border-bottom: 5px solid #255eb4;
   padding: 50px 0;
-  width: 500px;
 }
 /* SMALLER ELEMENTS */
 h1,
@@ -137,6 +136,7 @@ h2::after {
 
 .related-list {
   list-style: none;
+  margin-left: 0;
 }
 a:link {
   color: #255eb4;
@@ -189,11 +189,13 @@ button {
 .author-img {
   float: left;
   margin-bottom: 20px;
+  width: 50px;
+  height: 50px;
 }
 /* Without adding float to this, this still displays as a block and starts at the beginning of the container. To break it and have it start where the image floats, you have to float this element as well */
 .author {
   margin-left: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
   float: left;
 }
 
@@ -212,4 +214,19 @@ nav {
   clear: both;
   content: "";
   display: block;
+}
+
+article {
+  display: inline-block;
+  width: 825px;
+  float: left;
+}
+
+aside {
+  width: 300px;
+  float: right;
+}
+
+footer {
+  clear: both;
 }
