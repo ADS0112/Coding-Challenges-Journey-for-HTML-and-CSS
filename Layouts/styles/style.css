@@ -122,7 +122,9 @@ h2::after {
   display: inline-block;
   padding: 5px 10px;
   position: absolute;
-  right: -25px top -10px;
+  right: -25px;
+  top: -5xpx;
+
   color: black;
 }
 /* Typcially bad pracitce to style elements in accordanace with HTML structure. If we chnage HTML, the styles will change, so use classes */
@@ -272,4 +274,15 @@ footer {
   font-style: normal;
   margin-bottom: 5px;
   display: block;
+}
+.row {
+  display: flex;
+  gap: 75px;
+}
+
+aside {
+  flex: 0 0 300px;
+}
+article {
+  flex: 0 0 825px;
 }
