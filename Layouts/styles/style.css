@@ -13,6 +13,9 @@ body {
   /* Position: relaiive here because we want the button to be positoned relatively to this element. not the viewport */
   position: relative;
 }
+nav a:link {
+  margin-right: 30px;
+}
 /* Adds a width to the all the elements with a container, then uses margin left and right auto to center the items. The margin changes as the page shrinks and grows */
 .container {
   width: 1200px;
@@ -23,8 +26,6 @@ body {
 /* All other style elements inherit the properties of body until those specific elements styled */
 nav {
   font-size: 18px;
-  /* have to center a elements inside of the parent container, not the elements themselves becuase they are inline-block */
-  text-align: center;
 }
 .main-header {
   background-color: #f7f7f7;
@@ -40,6 +41,10 @@ article {
 
 .article-header {
   margin-bottom: 40px;
+}
+.author-img {
+  width: 50px;
+  height: 50px;
 }
 
 aside {
@@ -188,47 +193,83 @@ button {
 
 /* FLOATS */
 /* Image flots on the left of the cotnainer and breaks from document flow */
-.author-img {
+/* .author-img {
   float: left;
   margin-bottom: 20px;
   width: 50px;
   height: 50px;
-}
+} */
 /* Without adding float to this, this still displays as a block and starts at the beginning of the container. To break it and have it start where the image floats, you have to float this element as well */
-.author {
+/* .author {
   margin-left: 20px;
   margin-top: 10px;
   float: left;
-}
+} */
 
-h1 {
+/* h1 {
   float: left;
 }
 nav {
   float: right;
 }
-/* .clear {
-  clear: both;
+/* .clear { */
+/* clear: both;
 } */
 
 /* clear fix hack */
-.clearfix::after {
+/* .clearfix::after {
   clear: both;
   content: "";
   display: block;
-}
+} */
 
-article {
+/* article {
   display: inline-block;
   width: 825px;
   float: left;
-}
+} */
 
-aside {
+/* aside {
   width: 300px;
   float: right;
 }
 
 footer {
   clear: both;
+} */
+
+/* FLEXBOX */
+.main-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.author-box {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+.author {
+  margin-bottom: 0;
+}
+
+.related-post {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+.related-author {
+  margin-bottom: 0;
+  font-size: 14px;
+  font-weight: none;
+  font-style: italic;
+}
+.related-link:link {
+  font-size: 17px;
+  font-weight: bold;
+  font-style: normal;
+  margin-bottom: 5px;
+  display: block;
 }

@@ -36,10 +36,39 @@
         /* STARTER */
         font-family: sans-serif;
         background-color: #ddd;
-        font-size: 40px;
+        font-size: 34px;
         margin: 40px;
 
         /* FLEXBOX */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+      }
+      .el {
+        /* FLEX Properties 
+        flex-grow: determines if the items can grow to the max size to fit the container
+        Setting different elements to different flex values gives them more space. Something with flex-grow: 1; will get less space than flex-grow: 2; - it gets double the available space
+
+        flex-shrink: determines if the items are allowed to shrink so they can fit the container
+
+        flex-basis: sets the width, but this will chnage if flex shrink is on (change to max size container can handle, even if we set it over that)
+        
+        ALWAYS USE FLEX: 0 1 (AND WHATEVER BASIS U WANT)
+        THIS THE SHORT HAND PROPERTY
+
+        */
+        flex: 1;
+      }
+      .el--1 {
+        align-self: flex-start;
+      }
+      .el--5 {
+        align-self: stretch;
+        order: 1;
+      }
+      .el--6 {
+        order: -1;
       }
     </style>
   </head>
