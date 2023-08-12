@@ -114,18 +114,17 @@ h2 {
   position: relative;
 }
 
-h2::after {
+h2::before {
   content: "TOP";
   background-color: lightcoral;
-  font-size: 10px;
+  color: #444;
+  font-size: 16px;
   font-weight: bold;
   display: inline-block;
   padding: 5px 10px;
   position: absolute;
+  top: -10px;
   right: -25px;
-  top: -5xpx;
-
-  color: black;
 }
 /* Typcially bad pracitce to style elements in accordanace with HTML structure. If we chnage HTML, the styles will change, so use classes */
 
@@ -278,11 +277,14 @@ footer {
 .row {
   display: flex;
   gap: 75px;
+  margin-bottom: 60px;
 }
 
 aside {
   flex: 0 0 300px;
+  align-self: flex-start;
 }
 article {
-  flex: 0 0 825px;
+  flex: 1;
+  margin-bottom: 0;
 }
