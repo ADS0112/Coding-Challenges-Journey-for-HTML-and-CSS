@@ -142,10 +142,13 @@ body {
 .grid-2col {
   grid-template-columns: repeat(2, 1fr);
 }
-.grid-3sol {
+.grid-3col {
   grid-template-columns: repeat(3, 1fr);
 }
 
 .grid-center-v {
   align-items: center;
+}
+strong {
+  font-weight: 500;
 }
