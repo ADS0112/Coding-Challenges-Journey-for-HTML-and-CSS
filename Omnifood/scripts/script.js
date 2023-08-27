@@ -1,3 +1,16 @@
+/////////////////////////////////////////////////////////////Set Curren year
+const currentYear = new Date().getFullYear();
+const yearEl = document.querySelector(".year");
+yearEl.textContent = currentYear;
+
+/////////////////////////////////////////////////////////////Mobile NAv
+
+const btnNAVEl = document.querySelector(".mobile-nav");
+const headerEl = document.querySelector(".header");
+
+btnNAVEl.addEventListener("click", function () {
+  headerEl.classList.toggle("nav-open");
+});
 ///////////////////////////////////////////////////////////
 // Fixing flexbox gap property missing in some Safari versions
 function checkFlexGap() {
