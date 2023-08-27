@@ -96,6 +96,7 @@
   /* MOBILE NAVIGFATION */
   .mobile-nav {
     display: block;
+    z-index: 9999;
   }
   .main-nav {
     background-color: white;
