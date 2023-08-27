@@ -92,4 +92,9 @@
   .btn-form {
     margin-top: 1.2rem;
   }
+
+  /* MOBILE NAVIGFATION */
+  .mobile-nav {
+    display: block;
+  }
 }
