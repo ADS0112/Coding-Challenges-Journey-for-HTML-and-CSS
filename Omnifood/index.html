@@ -9,8 +9,11 @@
     "
     />
 
+    <link rel="icon" href="/Omnifood/img/favicon.png" />
+    <link rel="apple-touch-icon" href="/Omnifood/img/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="manifest" href="/Omnifood/manifest.webmanifest" />
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Rubik:wght@400;500;600;700&display=swap"
       rel="stylesheet"
@@ -33,7 +36,7 @@
     ></script>
     <script defer src="/Omnifood/scripts/script.js"></script>
 
-    <title>Omnifood</title>
+    <title>Omnifood &mdash; Never Cook Again</title>
   </head>
   <body>
     <header class="header">
@@ -110,11 +113,16 @@
             </div>
           </div>
           <div class="hero-img-box">
-            <img
-              src="/Omnifood/img/hero.png"
-              class="hero-img"
-              alt="Woman enjoying food, meals in storage container, and food bowls on a table"
-            />
+            <picture>
+              <source srcset="/Omnifood/img/hero.webp" type="image/webp" />
+              <source srcset="/Omnifood/img/hero-min.png" type="image/png" />
+
+              <img
+                src="/Omnifood/img/hero-min.png"
+                class="hero-img"
+                alt="Woman enjoying food, meals in storage container, and food bowls on a table"
+              />
+            </picture>
           </div>
         </div>
       </section>
